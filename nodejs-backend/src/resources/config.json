@@ -1,0 +1,1092 @@
+{
+  "projectName": "ddict-01",
+  "description": "Testing for Data Dictionary CRUD system",
+  "auth": "jwt",
+  "database": {
+    "pathToLogo": {
+      "s": "/assets/applications_logos/mongodb-s.png",
+      "l": "/assets/applications_logos/mongodb.png"
+    },
+    "appName": "mongodb-database",
+    "disabled": false,
+    "type": "database",
+    "name": "mongodb",
+    "label": "MongoDB"
+  },
+  "stack": [
+    {
+      "appName": "nodejs-backend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/nodejs-s.png",
+        "l": "/assets/applications_logos/nodejs.png"
+      },
+      "type": "backend",
+      "name": "nodejs",
+      "label": "Node.js Express Feathers.js"
+    },
+    {
+      "appName": "react-frontend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/react-s.png",
+        "l": "/assets/applications_logos/react.png"
+      },
+      "type": "frontend",
+      "name": "react",
+      "label": "React JavaScript"
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "users",
+      "databaseName": "users",
+      "displayName": "Users",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [],
+      "schemaList": [
+        {
+          "fieldName": "name",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Name",
+          "min": 2,
+          "max": 100,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": true,
+          "lowercase": true,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Email",
+          "min": 5,
+          "max": 150,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "password",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": true,
+          "editable": false,
+          "sortable": false,
+          "required": true,
+          "component": "p",
+          "label": "Password",
+          "min": 5,
+          "max": 300,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": true,
+      "seeder": [],
+      "skip": true,
+      "downloadable": true,
+      "uploadable": false,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "maklumatDaerah",
+      "databaseName": "maklumat_daerah",
+      "displayName": "Maklumat Daerah",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "namaDaerah",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": true,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Nama Daerah",
+          "faker": {
+            "skip": false,
+            "_id": "66f53995743a898bf29c2dff"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "namaDaerah": "Beaufort"
+        },
+        {
+          "namaDaerah": "Beluran"
+        },
+        {
+          "namaDaerah": "Kota Belud"
+        },
+        {
+          "namaDaerah": "Kinabatangan"
+        },
+        {
+          "namaDaerah": "Kalabakan"
+        },
+        {
+          "namaDaerah": "Keningau"
+        },
+        {
+          "namaDaerah": "Kota Kinabalu"
+        },
+        {
+          "namaDaerah": "Kota Marudu"
+        },
+        {
+          "namaDaerah": "Kuala Penyu"
+        },
+        {
+          "namaDaerah": "Kudat"
+        },
+        {
+          "namaDaerah": "Kunak"
+        },
+        {
+          "namaDaerah": "Lahad Datu"
+        },
+        {
+          "namaDaerah": "Membakut"
+        },
+        {
+          "namaDaerah": "Nabawan"
+        },
+        {
+          "namaDaerah": "Papar"
+        },
+        {
+          "namaDaerah": "Penampang"
+        },
+        {
+          "namaDaerah": "Pitas"
+        },
+        {
+          "namaDaerah": "Putatan"
+        },
+        {
+          "namaDaerah": "Ranau"
+        },
+        {
+          "namaDaerah": "Sandakan"
+        },
+        {
+          "namaDaerah": "Semporna"
+        },
+        {
+          "namaDaerah": "Sipitang"
+        },
+        {
+          "namaDaerah": "Tambunan"
+        },
+        {
+          "namaDaerah": "Tawau"
+        },
+        {
+          "namaDaerah": "Telupid"
+        },
+        {
+          "namaDaerah": "Tenom"
+        },
+        {
+          "namaDaerah": "Tongod"
+        },
+        {
+          "namaDaerah": "Tuaran"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "parlimen",
+      "databaseName": "parlimen",
+      "displayName": "Parlimen",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "namaParlimen",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": true,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Nama Parlimen",
+          "faker": {
+            "skip": false,
+            "_id": "66f53995743a898bf29c2e01"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "kodParlimen",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Kod Parlimen",
+          "faker": {
+            "skip": false,
+            "_id": "66f53995743a898bf29c2e02"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "namaParlimen": "Kudat",
+          "kodParlimen": "P167"
+        },
+        {
+          "namaParlimen": "Kota Marudu",
+          "kodParlimen": "P169"
+        },
+        {
+          "namaParlimen": "Kota Belud",
+          "kodParlimen": "P169"
+        },
+        {
+          "namaParlimen": "Tuaran",
+          "kodParlimen": "P170"
+        },
+        {
+          "namaParlimen": "Sepanggar",
+          "kodParlimen": "P171"
+        },
+        {
+          "namaParlimen": "Kota Kinabalu",
+          "kodParlimen": "P172"
+        },
+        {
+          "namaParlimen": "Putatan",
+          "kodParlimen": "P173"
+        },
+        {
+          "namaParlimen": "Penampang",
+          "kodParlimen": "P174"
+        },
+        {
+          "namaParlimen": "Papar",
+          "kodParlimen": "P175"
+        },
+        {
+          "namaParlimen": "Kimanis",
+          "kodParlimen": "P176"
+        },
+        {
+          "namaParlimen": "Beaufort",
+          "kodParlimen": "P177"
+        },
+        {
+          "namaParlimen": "Sipitang",
+          "kodParlimen": "P178"
+        },
+        {
+          "namaParlimen": "Ranau",
+          "kodParlimen": "P179"
+        },
+        {
+          "namaParlimen": "Keningau",
+          "kodParlimen": "P180"
+        },
+        {
+          "namaParlimen": "Tenom",
+          "kodParlimen": "P181"
+        },
+        {
+          "namaParlimen": "Pensiangan",
+          "kodParlimen": "P182"
+        },
+        {
+          "namaParlimen": "Beluran",
+          "kodParlimen": "P183"
+        },
+        {
+          "namaParlimen": "Libaran",
+          "kodParlimen": "P184"
+        },
+        {
+          "namaParlimen": "Batu Sapi",
+          "kodParlimen": "P185"
+        },
+        {
+          "namaParlimen": "Sandakan",
+          "kodParlimen": "P186"
+        },
+        {
+          "namaParlimen": "Kinabatangan",
+          "kodParlimen": "P187"
+        },
+        {
+          "namaParlimen": "Lahad Datu",
+          "kodParlimen": "P188"
+        },
+        {
+          "namaParlimen": "Semporna",
+          "kodParlimen": "P189"
+        },
+        {
+          "namaParlimen": "Tawau",
+          "kodParlimen": "P190"
+        },
+        {
+          "namaParlimen": "Kalabakan",
+          "kodParlimen": "P191"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "dun",
+      "databaseName": "dun",
+      "displayName": "Dun",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "namaDun",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": true,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Nama DUN",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f53995743a898bf29c2e04"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "kodDun",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Kod DUN",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f53995743a898bf29c2e05"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "kodParlimen",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Kod Parlimen",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f53995743a898bf29c2e06"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "namaDun": "BANGGI",
+          "kodDun": "N1",
+          "kodParlimen": "P167"
+        },
+        {
+          "namaDun": "Bengkoka",
+          "kodDun": "N2",
+          "kodParlimen": "P167"
+        },
+        {
+          "namaDun": "Pitas",
+          "kodDun": "N3",
+          "kodParlimen": "P167"
+        },
+        {
+          "namaDun": "Tanjong Kapor",
+          "kodDun": "N4",
+          "kodParlimen": "P167"
+        },
+        {
+          "namaDun": "Matunggong",
+          "kodDun": "N5",
+          "kodParlimen": "P168"
+        },
+        {
+          "namaDun": "Bandau",
+          "kodDun": "N6",
+          "kodParlimen": "P168"
+        },
+        {
+          "namaDun": "Tandek",
+          "kodDun": "N7",
+          "kodParlimen": "P168"
+        },
+        {
+          "namaDun": "Pintasan",
+          "kodDun": "N8",
+          "kodParlimen": "P169"
+        },
+        {
+          "namaDun": "Tempasuk",
+          "kodDun": "N9",
+          "kodParlimen": "P169"
+        },
+        {
+          "namaDun": "Usukan",
+          "kodDun": "N10",
+          "kodParlimen": "P169"
+        },
+        {
+          "namaDun": "Kadamaian",
+          "kodDun": "N11",
+          "kodParlimen": "P169"
+        },
+        {
+          "namaDun": "Sulaman",
+          "kodDun": "N12",
+          "kodParlimen": "P170"
+        },
+        {
+          "namaDun": "Pantai Dalit",
+          "kodDun": "N13",
+          "kodParlimen": "P170"
+        },
+        {
+          "namaDun": "Tamparuli",
+          "kodDun": "N14",
+          "kodParlimen": "P170"
+        },
+        {
+          "namaDun": "Kiulu",
+          "kodDun": "N15",
+          "kodParlimen": "P170"
+        },
+        {
+          "namaDun": "Karambunai",
+          "kodDun": "N16",
+          "kodParlimen": "P171"
+        },
+        {
+          "namaDun": "Darau",
+          "kodDun": "N17",
+          "kodParlimen": "P171"
+        },
+        {
+          "namaDun": "Inanam",
+          "kodDun": "N18",
+          "kodParlimen": "P171"
+        },
+        {
+          "namaDun": "Likas",
+          "kodDun": "N19",
+          "kodParlimen": "P172"
+        },
+        {
+          "namaDun": "Api-Api",
+          "kodDun": "N20",
+          "kodParlimen": "P172"
+        },
+        {
+          "namaDun": "Luyang",
+          "kodDun": "N21",
+          "kodParlimen": "P172"
+        },
+        {
+          "namaDun": "Tanjung Aru",
+          "kodDun": "N22",
+          "kodParlimen": "P173"
+        },
+        {
+          "namaDun": "Petagas",
+          "kodDun": "N23",
+          "kodParlimen": "P173"
+        },
+        {
+          "namaDun": "Tanjung Keramat",
+          "kodDun": "N24",
+          "kodParlimen": "P173"
+        },
+        {
+          "namaDun": "Kapayan",
+          "kodDun": "N25",
+          "kodParlimen": "P174"
+        },
+        {
+          "namaDun": "Moyog",
+          "kodDun": "N26",
+          "kodParlimen": "P174"
+        },
+        {
+          "namaDun": "Limbahau",
+          "kodDun": "N27",
+          "kodParlimen": "P175"
+        },
+        {
+          "namaDun": "Kawang",
+          "kodDun": "N28",
+          "kodParlimen": "P175"
+        },
+        {
+          "namaDun": "Pantai Manis",
+          "kodDun": "N29",
+          "kodParlimen": "P175"
+        },
+        {
+          "namaDun": "Bongawan",
+          "kodDun": "N30",
+          "kodParlimen": "P176"
+        },
+        {
+          "namaDun": "Membakut",
+          "kodDun": "N31",
+          "kodParlimen": "P176"
+        },
+        {
+          "namaDun": "Klias",
+          "kodDun": "N32",
+          "kodParlimen": "P177"
+        },
+        {
+          "namaDun": "Kuala Penyu",
+          "kodDun": "N33",
+          "kodParlimen": "P177"
+        },
+        {
+          "namaDun": "Lumadan",
+          "kodDun": "N34",
+          "kodParlimen": "P178"
+        },
+        {
+          "namaDun": "Sindumin",
+          "kodDun": "N35",
+          "kodParlimen": "P178"
+        },
+        {
+          "namaDun": "Kundasang",
+          "kodDun": "N36",
+          "kodParlimen": "P179"
+        },
+        {
+          "namaDun": "Karanaan",
+          "kodDun": "N37",
+          "kodParlimen": "P179"
+        },
+        {
+          "namaDun": "Paginatan",
+          "kodDun": "N38",
+          "kodParlimen": "P179"
+        },
+        {
+          "namaDun": "Tambunan",
+          "kodDun": "N39",
+          "kodParlimen": "P180"
+        },
+        {
+          "namaDun": "Bingkor",
+          "kodDun": "N40",
+          "kodParlimen": "P180"
+        },
+        {
+          "namaDun": "Liawan",
+          "kodDun": "N41",
+          "kodParlimen": "P180"
+        },
+        {
+          "namaDun": "Melalap",
+          "kodDun": "N42",
+          "kodParlimen": "P181"
+        },
+        {
+          "namaDun": "Kemabong",
+          "kodDun": "N43",
+          "kodParlimen": "P181"
+        },
+        {
+          "namaDun": "Tulid",
+          "kodDun": "N44",
+          "kodParlimen": "P182"
+        },
+        {
+          "namaDun": "Sook",
+          "kodDun": "N45",
+          "kodParlimen": "P182"
+        },
+        {
+          "namaDun": "Nabawan",
+          "kodDun": "N46",
+          "kodParlimen": "P182"
+        },
+        {
+          "namaDun": "Telupid",
+          "kodDun": "N47",
+          "kodParlimen": "P183"
+        },
+        {
+          "namaDun": "Sugut",
+          "kodDun": "N48",
+          "kodParlimen": "P183"
+        },
+        {
+          "namaDun": "Labuk",
+          "kodDun": "N49",
+          "kodParlimen": "P183"
+        },
+        {
+          "namaDun": "Gum-Gum",
+          "kodDun": "N50",
+          "kodParlimen": "P184"
+        },
+        {
+          "namaDun": "Sungai Manila",
+          "kodDun": "N51",
+          "kodParlimen": "P184"
+        },
+        {
+          "namaDun": "Sungai Sibuga",
+          "kodDun": "N52",
+          "kodParlimen": "P184"
+        },
+        {
+          "namaDun": "Sekong",
+          "kodDun": "N53",
+          "kodParlimen": "P185"
+        },
+        {
+          "namaDun": "Karamunting",
+          "kodDun": "N54",
+          "kodParlimen": "P185"
+        },
+        {
+          "namaDun": "Elopura",
+          "kodDun": "N55",
+          "kodParlimen": "P186"
+        },
+        {
+          "namaDun": "Tanjong Papat",
+          "kodDun": "N56",
+          "kodParlimen": "P186"
+        },
+        {
+          "namaDun": "Kuamut",
+          "kodDun": "N57",
+          "kodParlimen": "P187"
+        },
+        {
+          "namaDun": "Lamag",
+          "kodDun": "N58",
+          "kodParlimen": "P187"
+        },
+        {
+          "namaDun": "Sukau",
+          "kodDun": "N59",
+          "kodParlimen": "P187"
+        },
+        {
+          "namaDun": "Tungku",
+          "kodDun": "N60",
+          "kodParlimen": "P188"
+        },
+        {
+          "namaDun": "Segama",
+          "kodDun": "N61",
+          "kodParlimen": "P188"
+        },
+        {
+          "namaDun": "Silam",
+          "kodDun": "N62",
+          "kodParlimen": "P188"
+        },
+        {
+          "namaDun": "Kunak",
+          "kodDun": "N63",
+          "kodParlimen": "P188"
+        },
+        {
+          "namaDun": "Sulabayan",
+          "kodDun": "N64",
+          "kodParlimen": "P189"
+        },
+        {
+          "namaDun": "Senallang",
+          "kodDun": "N65",
+          "kodParlimen": "P189"
+        },
+        {
+          "namaDun": "Bugaya",
+          "kodDun": "N66",
+          "kodParlimen": "P189"
+        },
+        {
+          "namaDun": "Balung",
+          "kodDun": "N67",
+          "kodParlimen": "P190"
+        },
+        {
+          "namaDun": "Apas",
+          "kodDun": "N68",
+          "kodParlimen": "P190"
+        },
+        {
+          "namaDun": "Sri Tanjong",
+          "kodDun": "N69",
+          "kodParlimen": "P190"
+        },
+        {
+          "namaDun": "Kukusan",
+          "kodDun": "N70",
+          "kodParlimen": "P191"
+        },
+        {
+          "namaDun": "Tanjong Batu",
+          "kodDun": "N71",
+          "kodParlimen": "P191"
+        },
+        {
+          "namaDun": "Merotai",
+          "kodDun": "N72",
+          "kodParlimen": "P191"
+        },
+        {
+          "namaDun": "Sebatik\r\r\n",
+          "kodDun": "N73",
+          "kodParlimen": "P191"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    }
+  ]
+}
